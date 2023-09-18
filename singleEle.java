@@ -36,4 +36,37 @@ public class singleEle {
         }
         return ans;
     }
+
+    //binary search
+    public int single(int[] nums) {
+        int n = nums.length;
+
+        //edge testcases
+        if(n==1) return nums[0]; // if length is 1
+        if(nums[0]!=nums[1]) return nums[0]; // for first element
+        if(nums[n-1]!=nums[n-2]) return nums[n-1]; // for last element
+
+        //binary search starts
+        int s = 1; //from second element
+        int e = n - 2; //till second last element
+        int ans = -1;
+        while(s<=e){
+            int m = s + (e-s)/2;
+
+            //checking if element is single element
+            if(nums[m]!=nums[m+1] && nums[m]!=nums[m-1]) ans = nums[m];
+
+            //we are on left part, element will be on right part so trim left part
+            if(m%2!=0 && nums[m-1]==nums[m] || m%2==0 && nums[m] == nums[m+1]){
+                s = m + 1;
+            }
+
+            //we are on right part, element will be on left part so trim righ part
+            else{
+                e = m - 1;
+            }
+        }
+        return ans;
+
+    }
 }
