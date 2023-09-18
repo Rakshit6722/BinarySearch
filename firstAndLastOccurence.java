@@ -7,7 +7,7 @@ public class firstAndLastOccurence {
         int[] arr = {1,1,2,2,3,4,4};
         int[] ans = searchRange(arr, 4);
         for(int i = 0;i<ans.length;i++){
-            System.out.println(ans[i]);
+            System.out.println(ans);
         }
 
     }
