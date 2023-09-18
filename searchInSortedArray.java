@@ -67,6 +67,6 @@ public class searchInSortedArray {
                 s = m + 1;
             }
         }
-        return -1;
+        return -1;//if nothing is found
     }
 }
