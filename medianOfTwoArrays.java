@@ -8,7 +8,7 @@ public class medianOfTwoArrays {
 
     }
 
-    //brute force
+    //brute force --->
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         ArrayList<Integer> res = new ArrayList<>();
         for (int i = 0; i < nums1.length; i++) {
